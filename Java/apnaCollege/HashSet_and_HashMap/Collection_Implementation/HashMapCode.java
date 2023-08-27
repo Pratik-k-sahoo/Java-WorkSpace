@@ -7,6 +7,7 @@ import java.util.Set;
 public class HashMapCode {
     public static void main(String[] args) {
         HashMap<String, Integer> map=new HashMap<>();
+        HashMap<String, Integer> ans=new HashMap<>();
 
         //Insertion
         map.put("India", 120);
@@ -15,11 +16,17 @@ public class HashMapCode {
         map.put("Nepal", 15);
         map.put("Singapore", 5);
 
+        ans.put("India", 120 );
+        ans.put("China", 180);
+        ans.put("US", 50);
+        ans.put("Nepal", 15);
+        ans.put("Singapore", 5);
+
         //Print elements
         System.out.println(map);
 
         //Updating
-        map.put("India", 200);
+        // map.put("India", 200);
 
         //Searching
         if(map.containsKey("India")){
@@ -44,5 +51,15 @@ public class HashMapCode {
         for(String key:keys){
             System.out.println(key + "->" + map.get(key));
         }
+
+        System.out.println("SEARCH");
+        for(Map.Entry<String, Integer> e : map.entrySet()){
+            System.out.println(e);
+            System.out.println(ans.get(e.getKey()) + " " + e.getValue());
+			if(!(ans.get(e.getKey()).equals(e.getValue())) || ans!=e){
+				System.out.println("NO");
+                break;
+			}
+		}
     }
 }
