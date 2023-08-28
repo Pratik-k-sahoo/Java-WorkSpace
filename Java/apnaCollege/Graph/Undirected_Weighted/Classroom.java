@@ -35,7 +35,7 @@ public class Classroom {
     public static void printNeighbour(ArrayList<Edge> graph[], int v){
         for(int i=0; i<graph[v].size(); i++){
             Edge e = graph[v].get(i);
-            System.out.print(e.dest + " ");
+            System.out.println(e.dest + ", " + e.weight);
         }
         System.out.println();
     }
