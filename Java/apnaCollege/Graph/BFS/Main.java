@@ -71,7 +71,7 @@ public class Main{
        /    |\
       0     | 5--6
        \    |/
-        2   4
+        2---4
     */
     
         ArrayList<Edge> graph[] = new ArrayList[V];
